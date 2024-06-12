@@ -9,17 +9,17 @@
 <body>
   <div class="cart">
     <h1>Cart Card</h1>
-    <button id="showQuantity" onclick="showQuantity()">Show Quantity</button>
-    <button id="_increment" onclick="increment1()">Add to cart</button>
+    <button id="showQuantity" onclick="showQuantity(), fetchPrice()">Show Quantity</button>
+    <button id="_increment" onclick="increment1(), fetchPrice()">Add to cart</button>
     
-    <button id="__increment" style="margin-left: 75px;" onclick="increment2()">+2</button>
-    <button id="___increment" onclick="increment3()">+3</button>
-    <button id="_decrement" onclick="decrement()">Remove from cart</button>
-    <button id="reset" onclick="reset()">Reset cart</button><br><br>
+    <button id="__increment" style="margin-left: 75px;" onclick="increment2(), fetchPrice()">+2</button>
+    <button id="___increment" onclick="increment3(), fetchPrice()" >+3</button>
+    <button id="_decrement" onclick="decrement(), fetchPrice()">Remove from cart</button>
+    <button id="reset" onclick="reset(), fetchPrice()">Reset cart</button><br><br>
     <p id="result"></p>
 
     <div class="price__calc">
-      <button id="__calc" onclick="fetchPrice()" style="margin-bottom: 10px;">Get Price</button>
+      <!-- <button id="__calc" onclick="fetchPrice()" style="margin-bottom: 10px;">Get Price</button> -->
       <p>Total Price: <span id="price" style="float: right; font-weight: bold;"></span></p>
     </div>
   </div>
