@@ -46,10 +46,11 @@ function increment3(){
   result.textContent = ("Cart Quantity:" + " " + cartQuantity);
 }
 
-function getPrice() {
+function fetchPrice() {
   let amount = 25;
+  let getPrice;
   getPrice = cartQuantity * amount;
-
+  
   price.textContent = "$" + "" + getPrice;
-  return;
+
 }
