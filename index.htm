@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Test</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .cart{
+    width: 250px;
+    height: 350px;
+    border: 2px solid blueviolet;
+    background-color: antiquewhite;
+    margin: 25px;
+    padding: 15px;
+    padding-block: 35px;
+  }
+
+  h1{
+    margin-bottom: 15px;
+    width: fit-content;
+    border-bottom: 2px solid black;
+  }
+
+  button{
+    color: white;
+    border: none;
+    background-color:blue ;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 30px;
+    transition: .3s ease-in;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: rgba(27, 27, 204, 0.733);
+    transform: translateY(-2px);
+  }
+
+  #result{
+    text-align: center; 
+    font-size: 20px; 
+    font-family: 'Courier New', Courier, monospace; 
+    border: 1px solid black;
+  }
+
+  .price__calc{
+    margin-top: 15px;
+    height: 90px;
+    padding: 2px;
+  }
+</style>
+<body>
+  <div class="cart">
+    <h1>Cart Card</h1>
+    <button id="showQuantity" onclick="showQuantity()">Show Quantity</button>
+    <button id="_increment" onclick="increment1()">Add to cart</button>
+    
+    <button id="__increment" style="margin-left: 75px;" onclick="increment2()">+2</button>
+    <button id="___increment" onclick="increment3()">+3</button>
+    <button id="_decrement" onclick="decrement()">Remove from cart</button>
+    <button id="reset" onclick="reset()">Reset cart</button><br><br>
+    <p id="result"></p>
+
+    <div class="price__calc">
+      <button id="__calc" onclick="getPrice()" style="margin-bottom: 10px;">Get Price</button>
+      <p>Total Price: <span id="price" style="float: right;"></span></p>
+    </div>
+  </div>
+  
+ <script src="script.js"></script>
+</body>
+</html>
